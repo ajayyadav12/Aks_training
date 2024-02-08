@@ -1,0 +1,98 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif; /* Custom font for a unique look */
+}
+
+body {
+  margin: 0;
+  background-color: #f9f9f9; /* Light gray background */
+}
+
+/* Header Styles */
+header {
+  width: 100%;
+  height: 7rem; /* Increased header height for better presence */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); /* Gradient background for header */
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+  font-size: 2.5rem; /* Larger font size for header title */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for depth */
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem; /* Increased spacing between header title and link */
+  font-weight: bold; /* Bold font for header link */
+  transition: transform 0.3s ease; /* Added transition for link hover effect */
+}
+
+header a:hover {
+  transform: translateY(-2px); /* Move link upward on hover for subtle interaction */
+}
+
+/* Section Styles */
+section {
+  margin: 3rem auto; /* Increased margin for better separation */
+  max-width: 40rem; /* Increased maximum width for content */
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Enhanced box shadow for depth */
+  border-radius: 20px; /* Increased border radius for softer edges */
+  background-color: #fff; /* White background for sections */
+}
+
+/* Form Control Styles */
+.form-control {
+  margin: 1.5rem 0; /* Increased margin for better spacing */
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 1rem; /* Increased margin bottom for better separation */
+  display: block;
+  color: #555; /* Darkened label color for contrast */
+}
+
+/* Input and Textarea Styles */
+input,
+textarea {
+  font: inherit;
+  display: block;
+  width: 100%;
+  padding: 1rem; /* Increased padding for better input area */
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Reduced border radius for input fields */
+  transition: border-color 0.3s ease; /* Added transition for smoother focus effect */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #833ab4; /* Accent color for focused input fields */
+  outline: none;
+}
+
+/* Button Styles */
+button {
+  cursor: pointer;
+  font: inherit;
+  border: none;
+  background-image: linear-gradient(135deg, #fd1d1d, #fcb045); /* Gradient background for button */
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease; /* Added transition for button hover effect */
+}
+
+button:hover {
+  transform: scale(1.05); /* Slightly scale up button on hover for interactive feel */
+}

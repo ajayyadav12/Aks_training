@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: app3-sample-loadbalancer-service
+  labels:
+    app: app3-sample
+spec:
+  type: LoadBalancer
+  selector:
+    app: app3-sample
+  ports:
+    - port: 80
+      targetPort: 80

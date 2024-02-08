@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app4-sample-deployment
+  labels:
+    app: app4-sample
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app4-sample
+  template:
+    metadata:
+      labels:
+        app: app4-sample
+    spec:
+      containers:
+        - name: app4-sample
+          image: ajayy6796/volume-training:latest
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: azurefileshare01
+              mountPath: /app/feedback
+              readOnly: false
+            - name: pv001
+              mountPath: /mnt
+              readOnly: false
+      volumes:
+      - name: pv001
+        persistentVolumeClaim:
+          claimName: azure-managed-disk-pvc
+      - name: azurefileshare01
+        azureFile:
+          secretName: storage-secret
+          shareName: training
+          readOnly: false

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Share some Feedback!</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1><a href="/">AJ Training</a></h1> <!-- Added "AJ Training" for clarity -->
+  </header>
+  <main>
+    <section>
+      <h2>Share Your Feedback</h2> <!-- Updated section heading -->
+      <form action="/create" method="POST">
+        <div class="form-control">
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title" required /> <!-- Added "required" attribute for mandatory fields -->
+        </div>
+        <div class="form-control">
+          <label for="text">Feedback</label> <!-- Updated label for clarity -->
+          <textarea name="text" id="text" rows="10" required></textarea> <!-- Added "required" attribute for mandatory fields -->
+        </div>
+        <button type="submit">Submit</button> <!-- Changed button text to "Submit" for clarity -->
+      </form>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app3-sample-deployment
+  labels:
+    app: app3-sample
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app3-sample
+  template:
+    metadata:
+      labels:
+        app: app3-sample
+    spec:
+      containers:
+        - name: app3-sample
+          image: ajayy6796/training
+          ports:
+            - containerPort: 80
