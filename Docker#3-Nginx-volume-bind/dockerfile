@@ -1,0 +1,4 @@
+FROM nginx
+COPY index.html /usr/share/nginx/html/index.html
+# docker run -it --rm -d -p 8010:80 --name training01 -v C:\Temp\training\Aks_training\Nginx\site-content:/usr/share/nginx/html nginxn
+# apt-get update && apt-get install apt-file -y && apt-file update && apt-get install vim -y
